@@ -6,10 +6,10 @@ module.exports = {
   options: {
     asyncTimeout: 2000
   },
-  setup: function(validator, Class) {
+  setup: function (validator, Class) {
     // asynchronous validator
-    Class.registerFormat("string-length", function(str, callback) {
-      setTimeout(function() {
+    Class.registerFormat("string-length", function (str, callback) {
+      setTimeout(function () {
         callback(str.length > 10);
       }, 1);
     });
